@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Gautam Ahuja",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -28.23, "left": 1.66, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": -108.31, "left": -187.56, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -168.96,
+      "left": 298.91,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "encoder1:CLK", "uno:2", "orange", [ "h0" ] ],
+    [ "encoder1:DT", "uno:3", "blue", [ "h0" ] ],
+    [ "encoder1:SW", "uno:4", "violet", [ "h0" ] ],
+    [ "encoder1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "encoder1:VCC", "uno:5V", "red", [ "h221.14", "v261.48", "h-119.59" ] ],
+    [ "bz1:2", "uno:5", "red", [ "v32.24", "h-123.73" ] ],
+    [ "bz1:1", "uno:GND.1", "black", [ "v19.79", "h-134.68" ] ]
+  ]
+}
